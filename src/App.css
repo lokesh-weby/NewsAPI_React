@@ -11,10 +11,28 @@ nav{
   display: flex;
   position: sticky;
   top: 0px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.308);
+  backdrop-filter: blur(10px);
   align-items: center;
   justify-content: space-around;
   padding:1.2rem 0rem ;
+}
+.author{
+  font-size: larger;
+  color: cadetblue;
+  font-weight:bold;
+}
+.card small{
+  width: 100%;
+  text-align: end;
+  color: gray;
+  margin: 1.2rem;
+
+}
+.title{
+  color: red;
+  font-size: larger;
+  
 }
 .wrapper{
   background-color: whitesmoke;
@@ -31,23 +49,16 @@ gap: 1.2rem;
 .card{
   display: flex;
   border: 2px solid black;
-  min-height: 450px;
+  min-height: 400px;
+  justify-content: space-between;
   width: 300px;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   gap: 1.2rem;
   padding: 10px;
   background-color:white;
   border-radius: 22px;
   
-}
-.card a{
-  text-decoration: none;
-  background-color: red;
-  color: white;
-  padding: 10px ;
-  border-radius: 10px;
 }
 .card img{
   height: 200px;

@@ -16,6 +16,8 @@ const App = () => {
       GetNews();      
   },[selectedCategory])
 
+  console.log(news);
+
   return (
     <>
     <nav>
@@ -37,10 +39,9 @@ const App = () => {
          news.map((newsData,index)=>(
           <div key={index} className='card'>
             <img src={newsData.urlToImage} alt={newsData.author} height={200} width={200} loading='lazy'/>
-            <p>{newsData.author}</p>
-            <p>{newsData.title}</p>
-            <small>{newsData.description}</small>
-            <a href={newsData.url} target='_blank'>ReadMore</a>
+            <p className='title'>{(index+1)+". "+newsData.title}</p>
+            <p>{(newsData.description)|| newsData.title}..<a href={newsData.url} target='_blank'> ReadMore</a></p>
+            <small>{"By "+newsData.author}</small>
           </div>
           )))}    
     </div>
